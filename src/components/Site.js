@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Nav from "./Nav";
 
 
 function Site() {
 
   return (
     <PageWrapper >
-      <p style={{gridArea: 'nav'}}>Welcome to Ayisha's world </p>
+      <Nav/>
+      <p style={{gridArea: 'content'}}>Welcome to Ayisha's world </p>
     </PageWrapper>
   );
 
@@ -23,7 +25,7 @@ grid-template-areas:
 'nav'
 'content'
 ;
-font-size: 2rem;
+font-size: 1rem;
 height: 100vh;
 width: 100vw;
 `;

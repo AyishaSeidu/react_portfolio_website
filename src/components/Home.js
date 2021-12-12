@@ -13,19 +13,19 @@ function Home() {
             </About>
 
         <HomeFooter>
-            <span>
-            <Linkedin/>
+            <ContactLink href='https://www.linkedin.com/in/ayishetu-seidu-70431392/'>
+            <Linkedin/> <br/>
             LinkedIn
-            </span>
+            </ContactLink>
            
-            <span>
-            <GitHub/>
+            <ContactLink href='https://github.com/AyishaSeidu'>
+            <GitHub/><br/>
             Github
-            </span>
-            <span>
-            <Mail/>
+            </ContactLink>
+            <ContactLink>
+            <Mail/> <br/>
             Contact
-            </span>
+            </ContactLink>
         </HomeFooter>
 
         </PageContainer>
@@ -56,4 +56,10 @@ bottom: 0;
 padding: auto;
 width: 100vw;
 justify-content: space-around;
+`;
+
+const ContactLink = styled.a`
+display: block;
+cursor: pointer;
+color: black;
 `;

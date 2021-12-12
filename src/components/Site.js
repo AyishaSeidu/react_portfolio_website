@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Nav from "./Nav";
+import Home, {} from './Home'
 
 
 function Site() {
@@ -8,7 +9,7 @@ function Site() {
   return (
     <PageWrapper >
       <Nav/>
-      <p style={{gridArea: 'content'}}>Welcome to Ayisha's world </p>
+      <Home/>
     </PageWrapper>
   );
 

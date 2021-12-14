@@ -29,4 +29,5 @@ grid-template-areas:
 font-size: 1rem;
 height: 100vh;
 width: 100vw;
+background-color: crimson;
 `;

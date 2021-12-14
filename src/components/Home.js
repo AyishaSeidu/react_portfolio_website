@@ -8,9 +8,8 @@ function Home() {
         <Container>
 
             <Introduction>
-           <h1>Ayisha </h1>
-           <h1>Seidu</h1>
-            <p>I am  Ghanaian frontend developer with speacilisaion in react js</p>
+            <Name>Ayisha Seidu</Name>
+            <IntroText>A Ghanaian frontend developer with specialisation in react js</IntroText>
             </Introduction>
            
             <Photo src='ayisha.jpg'/>
@@ -44,7 +43,9 @@ grid-template-row: 1fr 10rem;
 grid-template-areas: 
 'intro photo'
 'footer footer';
-background-color: lightviolet;
+background-color: white;
+border-radius: 0 0 50% 0;
+
 `;
 
 const Introduction = styled.div`
@@ -53,6 +54,16 @@ width: 50vw;
 font-size: 1rem;
 align-content: centre;
 `;
+
+const Name = styled.div`
+font-size: 7rem;
+font-weight: bold;
+padding: 1rem;
+color: crimson;
+text-shadow: 0.5rem 0.5rem black;
+`;
+
+const IntroText = styled.div``;
 
 const Photo = styled.img`
 grid-area: photo;

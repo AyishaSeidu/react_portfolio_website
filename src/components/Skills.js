@@ -40,7 +40,7 @@ width: 10rem;
 background-image: ${({imageURL})=> `url(${imageURL})`};
 background-repeat: no-repeat;
 background-position: center;
-bacground-size: contain;
+background-size: contain;
 border-radius: 1rem;
 padding: 1rem;
 margin: 0.5rem auto;

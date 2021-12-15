@@ -10,7 +10,7 @@ function Site() {
 
   const projects = [{id: 0, name: 'Dashboard App', description: 'A React dashboard built with data from the JSONPlacehoder API', link: 'https://reverent-raman-1baaf8.netlify.app/', image: 'dashboard'} ,{id: 1, name: 'Todo App', description: 'Using react to built a single paged todo app', link: 'https://wonderful-brattain-c2056e.netlify.app/', image: 'todo'}];
 
-  const skills = ['react', 'nodejs', 'javascript', 'css', 'html'];
+  const skills = ['react', 'nodejs', 'javascript', 'css', 'html', 'github'];
 
   return (
     <PageWrapper >

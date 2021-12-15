@@ -12,7 +12,7 @@ function Home() {
             <IntroText>A Ghanaian frontend developer with specialisation in react js</IntroText>
             </Introduction>
            
-            <Photo src='ayisha.jpg'/>
+            <Photo src='Ayi.png'/>
         <HomeFooter>
             <ContactLink href='https://www.linkedin.com/in/ayishetu-seidu-70431392/'>
             <Linkedin/> <br/>
@@ -60,16 +60,17 @@ font-size: 7rem;
 font-weight: bold;
 padding: 1rem;
 color: crimson;
-text-shadow: 0.5rem 0.5rem black;
+text-shadow: 0.2rem 0.2rem black;
 `;
 
-const IntroText = styled.div``;
+const IntroText = styled.div`
+
+`;
 
 const Photo = styled.img`
 grid-area: photo;
 width: auto;
-height: 20rem;
-border-radius: 1rem;
+height: 80%;
 `;
 
 

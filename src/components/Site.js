@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
+import {Linkedin, GitHub, Mail} from 'react-feather'
 import Home, {} from './Home'
 import Projects from "./Projects";
+
 
 
 function Site() {
@@ -10,8 +12,17 @@ function Site() {
 
   return (
     <PageWrapper >
+      <div style={{gridArea: "content"}}>
       <Home/>
       <Projects projects={projects}/>
+      </div>
+      <>
+      <Footer>
+        <Linkedin/>
+        <GitHub/>
+        <Mail/>
+      </Footer>
+      </>
     </PageWrapper>
   );
 
@@ -21,9 +32,26 @@ export default Site;
 
 
 const PageWrapper = styled.div`
+display: grid;
+grid-template-rows: 1fr 10rem;
+grid-template-areas: 
+'content'
+'footer';
 font-size: 1rem;
-height: 100vh;
 width: 100vw;
 background-color: white;
 overflow-x: auto;
 `;
+
+const Footer = styled.div`
+grid-area: footer;
+display: flex;
+flex-direction: row;
+margin: auto;
+background-color: crimson;
+padding: auto;
+width: 100vw;
+height: 100%;
+justify-content: space-around;
+`;
+

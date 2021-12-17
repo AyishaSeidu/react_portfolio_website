@@ -25,16 +25,16 @@ function Projects({projects}) {
 export default Projects
 
 const Container = styled.div`
-grid-area: content;
 display: flex;
 flex-direction: column;
-height: 100%;
+//height: 100%;
 width: 100%;
 background-color: white;
+margin: 1rem;
 `
 
 const Project = styled.div`
-display: inherit;
+display: flex;
 flex-direction: row;
 gap: 0.5rem;
 @media (max-width: 600px) {
@@ -46,8 +46,6 @@ margin: auto;
 height: 70%;
 width: 80%;
 `;
-
-
 
 const Image = styled.img`
 width: 30rem;

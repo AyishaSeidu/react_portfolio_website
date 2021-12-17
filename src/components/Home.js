@@ -8,10 +8,13 @@ function Home() {
 
             <Introduction>
             <Name>Ayisha Seidu</Name>
-            <IntroText>A Ghanaian frontend developer with specialisation in react js</IntroText>
+            <div>A Ghanaian frontend developer with specialisation in react js</div>
             </Introduction>
-           
-            <Photo src='Ayi.png'/>
+
+           <PhotoContainer>
+           <Photo src='Ayi.png'/>
+           </PhotoContainer>
+            
 
 
         </Container>
@@ -23,30 +26,46 @@ export default Home;
 const Container = styled.div`
 display: flex;
 flex-direction: row;
+@media (max-width: 600px) {
+    flex-direction: column;
+}
 background-color: white;
+background-color: lightseagreen;
+height: 100vh;
+width: 100vw;
 `;
 
 const Introduction = styled.div`
 width: 50vw;
 font-size: 1rem;
 align-content: centre;
+//margin: auto;
 `;
 
 const Name = styled.div`
 font-size: 5rem;
 font-weight: bold;
 padding: 1rem;
-color: crimson;
+color: tomato;
 text-shadow: 0.2rem 0.2rem black;
+@media (max-width: 600px) {
+    font-size: 3rem;
+}
 `;
 
-const IntroText = styled.div`
-
+const PhotoContainer = styled.div`
+@media (max-width: 600px) {
+    height: 70vh;
+    width: 100vw;
+    bottom: 1rem;
+}
 `;
 
 const Photo = styled.img`
-width: auto;
-height: 80%;
+@media (max-width: 600px) {
+    max-height: 100%;
+    max-width: 100%;
+}
 `;
 
 

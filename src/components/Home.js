@@ -11,9 +11,9 @@ function Home() {
             <div>A Ghanaian frontend developer with specialisation in react js</div>
             </Introduction>
 
-           <PhotoContainer>
-           <Photo src='Ayi.png'/>
-           </PhotoContainer>
+           <PhotoContainer />
+           {/* <Photo src='Ayi.png'/> */}
+           {/* </PhotoContainer> */}
             
 
 
@@ -54,6 +54,14 @@ text-shadow: 0.2rem 0.2rem black;
 `;
 
 const PhotoContainer = styled.div`
+align-self: right;
+height: 100%;
+width: 50%;
+background-image: url("Ayi.png");
+background-repeat: no-repeat;
+background-size: contain;
+backgound-position: center;
+
 @media (max-width: 600px) {
     height: 70vh;
     width: 100vw;
@@ -63,8 +71,9 @@ const PhotoContainer = styled.div`
 
 const Photo = styled.img`
 @media (max-width: 600px) {
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: auto;
+    margin: 0rem auto auto auto;
 }
 `;
 

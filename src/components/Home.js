@@ -38,7 +38,7 @@ width: 100vw;
 const Introduction = styled.div`
 width: 50vw;
 font-size: 1rem;
-align-content: centre;
+align-content: center;
 //margin: auto;
 `;
 
@@ -48,12 +48,13 @@ font-weight: bold;
 padding: 1rem;
 color: tomato;
 text-shadow: 0.2rem 0.2rem black;
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     font-size: 3rem;
 }
 `;
 
 const PhotoContainer = styled.div`
+margin: auto;
 align-self: right;
 height: 100%;
 width: 50%;
@@ -62,7 +63,7 @@ background-repeat: no-repeat;
 background-size: contain;
 backgound-position: center;
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     height: 70vh;
     width: 100vw;
     bottom: 1rem;
@@ -70,7 +71,7 @@ backgound-position: center;
 `;
 
 const Photo = styled.img`
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     height: 100%;
     width: auto;
     margin: 0rem auto auto auto;

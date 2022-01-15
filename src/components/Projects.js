@@ -13,7 +13,7 @@ function Projects({projects}) {
                         <Description>{project.description}</Description>
                         <ProjectLink href={project.link} target='_blank'>See Live Version</ProjectLink>
                         </div>
-                        <Image src={`${project.image}.png`} />
+                        <Image source={`${project.image}.png`} />
 
                     </Project>
                 )
@@ -34,12 +34,14 @@ margin: 1rem;
 `
 const PageDescription = styled.div`
 margin: 1rem auto;
+font-weight: bold;
+font-size: 1.5rem;
 `;
 
 
 const Project = styled.div`
 display: grid;
-grid-gap: 0.5rem;
+//grid-gap: 0.5rem;
 grid-template-columns: 1fr 1fr;
 grid-template-areas: 'projectDescription projectImage';
 
@@ -59,10 +61,23 @@ height: 70%;
 width: 80%;
 `;
 
-const Image = styled.img`
+// const Image = styled.img`
+// grid-area: projectImage;
+// width: 30rem;
+// margin: 1rem;
+// @media (max-width: 600px) {
+//     width: 20rem;
+// }
+// border-radius: 2rem;
+// `;
+const Image = styled.div`
 grid-area: projectImage;
-width: 30rem;
-margin: 1rem;
+width: 100%;
+height: 20rem;
+background-image: url(${({source})=>source});
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
 @media (max-width: 600px) {
     width: 20rem;
 }
@@ -80,6 +95,7 @@ const Description = styled.div`
 max-width: 20rem;
 font-style:italic;
 color: grey;
+margin: auto;
 `
 
 const ProjectLink = styled.a`

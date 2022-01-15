@@ -4,11 +4,11 @@ import React from 'react'
 function Projects({projects}) {
     return (
         <Container>
-            These are some projects I have built
+           <PageDescription >These are some projects I have built</PageDescription> 
             {projects.map((project)=> {
                 return (
                     <Project key={project.id}>
-                        <div>
+                        <div style={{gridArea: "projectDescription"}}>
                         <ProjectName>{project.name}</ProjectName>
                         <Description>{project.description}</Description>
                         <ProjectLink href={project.link} target='_blank'>See Live Version</ProjectLink>
@@ -32,13 +32,25 @@ width: 100%;
 background-color: white;
 margin: 1rem;
 `
+const PageDescription = styled.div`
+margin: 1rem auto;
+`;
+
 
 const Project = styled.div`
-display: flex;
-flex-direction: row;
-gap: 0.5rem;
+display: grid;
+grid-gap: 0.5rem;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 'projectDescription projectImage';
+
+:nth-child(odd) {
+    grid-template-areas: 'projectImage projectDescription';
+}
+
 @media (max-width: 600px) {
+    display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 justify-content: space-around;
 align-items: center;
@@ -48,6 +60,7 @@ width: 80%;
 `;
 
 const Image = styled.img`
+grid-area: projectImage;
 width: 30rem;
 margin: 1rem;
 @media (max-width: 600px) {
@@ -58,7 +71,7 @@ border-radius: 2rem;
 
 const ProjectName = styled.div`
 padding: 0.2rem;
-color: crimson;
+color: rgb(255, 99, 71);
 font-size: 2rem;
 font-weight: bold;
 `;
@@ -72,9 +85,10 @@ color: grey;
 const ProjectLink = styled.a`
 display: block;
 text-decoration: none;
-background-color: rgba(220,20,60, 0.8);
+//rgb for lightseagreen to be bale to set opacity
+background-color: rgba(37,175,161, 0.8);
 :hover {
-    background-color: crimson;
+    background-color: lightseagreen;
 }
 color: white;
 border-radius: 1rem;

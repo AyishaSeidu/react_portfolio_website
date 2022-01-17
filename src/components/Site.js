@@ -20,7 +20,7 @@ function Site() {
       <Footer>
        <FooterItem href="https://www.linkedin.com/in/ayishetu-seidu-70431392/" target="__blank"> <Linkedin size={30}/> </FooterItem> 
        <FooterItem href="https://github.com/AyishaSeidu" target="__blank"> <GitHub size={30} /> </FooterItem>
-       <FooterItem> <Mail size={30}/> </FooterItem>
+       <FooterItem href="mailto:ayishetuseidu13@gmail.com"> <Mail size={30}/> </FooterItem>
       </Footer>
       </>
     </PageWrapper>

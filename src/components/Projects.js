@@ -1,8 +1,16 @@
+import React, {useEffect} from 'react'
 import { keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
-import React from 'react'
+import styled from '@emotion/styled';
+import AOS from 'aos';
+import "aos/dist/aos.css"
+
 
 function Projects({projects}) {
+
+    useEffect(() => {
+        AOS.init({duration: 1000});
+    }, [])
+
     return (
         <Container>
            <PageDescription >These are some projects I have built</PageDescription> 
@@ -14,7 +22,7 @@ function Projects({projects}) {
                         <Description>{project.description}</Description>
                         <ProjectLink href={project.link} target='_blank'>See Live Version</ProjectLink>
                         </div>
-                        <Image source={`${project.image}.png`} />
+                        <Image source={`${project.image}.png`} data-aos="fade-up" />
 
                     </Project>
                 )
@@ -42,7 +50,7 @@ font-size: 1.5rem;
 
 const Project = styled.div`
 display: grid;
-//grid-gap: 0.5rem;
+grid-gap: 0.5rem;
 grid-template-columns: 1fr 1fr;
 grid-template-areas: 'projectDescription projectImage';
 
@@ -62,19 +70,11 @@ height: 70%;
 width: 80%;
 `;
 
-// const Image = styled.img`
-// grid-area: projectImage;
-// width: 30rem;
-// margin: 1rem;
-// @media (max-width: 600px) {
-//     width: 20rem;
-// }
-// border-radius: 2rem;
-// `;
 const Image = styled.div`
 grid-area: projectImage;
-width: 100%;
-height: 20rem;
+width: 20rem;
+height: 15rem;
+margin: auto;
 background-image: url(${({source})=>source});
 background-repeat: no-repeat;
 background-position: center;

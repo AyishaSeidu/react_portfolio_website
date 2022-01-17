@@ -1,3 +1,4 @@
+import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import React from 'react'
 
@@ -27,7 +28,7 @@ export default Projects
 const Container = styled.div`
 display: flex;
 flex-direction: column;
-//height: 100%;
+min-height: 100vh;
 width: 100%;
 background-color: white;
 margin: 1rem;

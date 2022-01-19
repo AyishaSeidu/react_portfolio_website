@@ -8,7 +8,7 @@ import Projects from "./Projects";
 
 function Site() {
 
-  const projects = [{id: 0, name: 'Dashboard App', description: 'A React dashboard built with data from the JSONPlacehoder API', link: 'https://reverent-raman-1baaf8.netlify.app/', image: 'dashboard'} ,{id: 1, name: 'Todo App', description: 'A single paged todo app with react', link: 'https://wonderful-brattain-c2056e.netlify.app/', image: 'todo'}];
+  const projects = [{id: 0, name: 'Portfolio Website', description: 'A personal portfolio website built with react', link: 'https://objective-wilson-e1fd49.netlify.app/', image: 'portfolio'}, {id: 1, name: 'Dashboard App', description: 'A React dashboard built with data from the JSONPlacehoder API', link: 'https://reverent-raman-1baaf8.netlify.app/', image: 'dashboard'} ,{id: 1, name: 'Todo App', description: 'A single paged todo app with react', link: 'https://wonderful-brattain-c2056e.netlify.app/', image: 'todo'}];
 
   return (
     <PageWrapper >

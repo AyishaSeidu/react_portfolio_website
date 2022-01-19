@@ -39,7 +39,7 @@ flex-direction: column;
 min-height: 100vh;
 width: 100%;
 background-color: white;
-margin: 1rem;
+margin: auto;
 `
 const PageDescription = styled.div`
 margin: 1rem auto;
@@ -74,14 +74,11 @@ const Image = styled.div`
 grid-area: projectImage;
 width: 20rem;
 height: 15rem;
-margin: auto;
+//margin: auto;
 background-image: url(${({source})=>source});
 background-repeat: no-repeat;
 background-position: center;
 background-size: contain;
-@media (max-width: 600px) {
-    width: 20rem;
-}
 border-radius: 2rem;
 `;
 

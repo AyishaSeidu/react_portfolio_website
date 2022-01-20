@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled';
 import AOS from 'aos';
 import "aos/dist/aos.css"
@@ -13,7 +12,7 @@ function Projects({projects}) {
 
     return (
         <Container>
-           <PageDescription >These are some projects I have built</PageDescription> 
+           <PageDescription >My Projects</PageDescription> 
             {projects.map((project)=> {
                 return (
                     <Project key={project.id}>
@@ -22,7 +21,7 @@ function Projects({projects}) {
                         <Description>{project.description}</Description>
                         <ProjectLink href={project.link} target='_blank'>See Live Version</ProjectLink>
                         </div>
-                        <Image source={`${project.image}.png`} data-aos="fade-up" />
+                        <Image source={`${project.image}.png`} data-aos="fade-up" data-aos-once="true" />
 
                     </Project>
                 )
@@ -43,7 +42,6 @@ margin: auto;
 `
 const PageDescription = styled.div`
 margin: 1rem auto;
-font-weight: bold;
 font-size: 1.5rem;
 `;
 
@@ -63,7 +61,7 @@ grid-template-areas: 'projectDescription projectImage';
     flex-direction: column;
     gap: 0.5rem;
 }
-justify-content: space-around;
+// justify-content: space-around;
 align-items: center;
 margin: auto;
 height: 70%;
@@ -74,7 +72,7 @@ const Image = styled.div`
 grid-area: projectImage;
 width: 20rem;
 height: 15rem;
-//margin: auto;
+margin: auto;
 background-image: url(${({source})=>source});
 background-repeat: no-repeat;
 background-position: center;

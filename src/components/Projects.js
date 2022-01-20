@@ -72,7 +72,7 @@ const Image = styled.div`
 grid-area: projectImage;
 width: 20rem;
 height: 15rem;
-margin: auto;
+//margin: auto;
 background-image: url(${({source})=>source});
 background-repeat: no-repeat;
 background-position: center;

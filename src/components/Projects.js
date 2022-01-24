@@ -52,7 +52,7 @@ grid-gap: 0.5rem;
 grid-template-columns: 1fr 1fr;
 grid-template-areas: 'projectDescription projectImage';
 
-:nth-child(odd) {
+:nth-of-type(odd) {
     grid-template-areas: 'projectImage projectDescription';
 }
 

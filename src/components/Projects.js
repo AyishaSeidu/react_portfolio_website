@@ -16,11 +16,12 @@ function Projects({projects}) {
             {projects.map((project)=> {
                 return (
                     <Project key={project.id}>
-                        <div style={{gridArea: "projectDescription"}}>
+                        <ProjectDetails >
                         <ProjectName>{project.name}</ProjectName>
                         <Description>{project.description}</Description>
                         <ProjectLink href={project.link} target='_blank'>See Live Version</ProjectLink>
-                        </div>
+                        </ProjectDetails>
+
                         <Image source={`${project.image}.png`} data-aos="fade-up" data-aos-once="true" />
 
                     </Project>
@@ -45,7 +46,6 @@ margin: 1rem auto;
 font-size: 1.5rem;
 `;
 
-
 const Project = styled.div`
 display: grid;
 grid-gap: 0.5rem;
@@ -61,23 +61,33 @@ grid-template-areas: 'projectDescription projectImage';
     flex-direction: column;
     gap: 0.5rem;
 }
-// justify-content: space-around;
 align-items: center;
 margin: auto;
 height: 70%;
 width: 80%;
 `;
 
+const ProjectDetails = styled.div`
+grid-area: projectDescription;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// justify-content: left;
+//margin: auto 0rem:
+`;
+
 const Image = styled.div`
 grid-area: projectImage;
 width: 20rem;
 height: 15rem;
-//margin: auto;
 background-image: url(${({source})=>source});
 background-repeat: no-repeat;
 background-position: center;
 background-size: contain;
 border-radius: 2rem;
+@media (min-width: 600px) {
+    margin: auto;
+}
 `;
 
 const ProjectName = styled.div`
@@ -88,7 +98,7 @@ font-weight: bold;
 `;
 
 const Description = styled.div`
-max-width: 20rem;
+width: 20rem;
 font-style:italic;
 color: grey;
 margin: auto;

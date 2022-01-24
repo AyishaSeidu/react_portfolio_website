@@ -11,7 +11,7 @@ function Projects({projects}) {
     }, [])
 
     return (
-        <Container>
+        <Container id="projects">
            <PageDescription >My Projects</PageDescription> 
             {projects.map((project)=> {
                 return (

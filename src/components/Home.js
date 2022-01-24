@@ -1,20 +1,33 @@
 import React from 'react'
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-//import {PageContainer} from './Styles'
+
 
 function Home() {
+
+const goToProjects = (e) => {
+    e.preventDefault();
+    let targetLink = e.target.getAttribute("href");
+    let targetLocation = document.querySelector(targetLink).offsetTop;
+
+    window.scrollTo({
+        left: 0,
+        top: targetLocation,
+        behavior: 'smooth'
+    })
+    
+}
+
     return (
         <Container>
 
             <Introduction>
             <Name>Ayisha Seidu</Name>
             <div>A Ghanaian frontend developer with specialisation in react js</div>
+            <Explorer href='#projects' onClick={(e)=> goToProjects(e)}>Explore</Explorer>
             </Introduction>
 
            <PhotoContainer />
-           {/* <Photo src='Ayi.png'/> */}
-           {/* </PhotoContainer> */}
             
 
 
@@ -69,6 +82,9 @@ width: 50vw;
 font-size: 1rem;
 align-content: center;
 animation: ${IntroductionAnitation} 5s ease-in;
+@media (min-width: 800px) {
+    margin: 3rem auto;
+}
 `;
 
 const Name = styled.div`
@@ -101,6 +117,19 @@ backgound-position: center;
 animation: ${PhotoAnimation} 5s ease-in;
 `;
 
-
+const Explorer = styled.a`
+display: block;
+background-color: tomato;
+color: cornsilk;
+width: 7rem;
+margin: 2rem auto;
+padding: .5rem;
+cursor: pointer;
+border-radius: 1rem;
+text-decoration: none;
+:hover {
+    font-size: 1.2rem;
+}
+`;
 
 

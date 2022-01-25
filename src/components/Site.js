@@ -47,7 +47,6 @@ const Footer = styled.div`
 grid-area: footer;
 display: flex;
 flex-direction: row;
-margin: auto;
 background-image: url("wave.svg");
 background-repeat: no-repeat;
 background-position: center;
@@ -60,9 +59,10 @@ align-items: flex-end;
 `;
 
 const FooterItem = styled.a`
+display: inherit;
 cursor: pointer;
 color: black;
-margin: auto;
+margin: 1rem auto;
 padding: 0.2rem;
 :hover {
   color: tomato;
